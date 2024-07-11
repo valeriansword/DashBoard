@@ -1,4 +1,14 @@
 import React from "react";
+// import { PiSquaresFour } from "react-icons/pi";
+import { GrSchedule } from "react-icons/gr";
+import { IoSettingsOutline } from "react-icons/io5";
+import { LuSearch } from "react-icons/lu";
+import { BsPersonCircle } from "react-icons/bs";
+// import { TiTickOutline } from "react-icons/ti";
+// import { BsThreeDotsVertical } from "react-icons/bs";
+
+import 'primeicons/primeicons.css';
+
 import { TiTickOutline } from "react-icons/ti";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { PiSquaresFour } from "react-icons/pi";
@@ -35,7 +45,7 @@ function Tasks() {
 const tasks=[
   {
     id:1,
-    taskname:"complete Stage",
+    taskname:"completed Stage",
     level:25,
     icons:<FaRegCheckCircle color='rgba(75, 251, 114, 1)'/>
     
@@ -109,6 +119,41 @@ const stages=[
 
 
 ]
+
+const levels=[
+  
+  {
+    level:1,
+    Description:"Description"
+  },{
+    level:2,
+    Description:"Description"
+  },{
+    level:3,
+    Description:"Description"
+  },{
+    level:4,
+    Description:"Description"
+  },{
+    level:5,
+    Description:"Description"
+  },{
+    level:6,
+    Description:"Description"
+  },{
+    level:7,
+    Description:"Description"
+  },{
+    level:8,
+    Description:"Description"
+  },{
+    level:9,
+    Description:"Description"
+  },{
+    level:10,
+    Description:"Description"
+  }
+]
 var newDate = new Date();
 let dateTime=new Intl.DateTimeFormat("en-In",{
   dateStyle:"short",
@@ -117,11 +162,75 @@ let dateTime=new Intl.DateTimeFormat("en-In",{
 let curDate=dateTime.format(newDate);
 
   return (
-   <div>
-    <div className='grid ml-sm mr-2 p-2 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 bg-violet-200 w-lg rounded-lg'>
+   <div className="">
+     <div className='flex justify-between bg-white-500 w-100'>
+     <div className=' bg-white-500 h-full  font-mono font-bold'>
+
+      {/* topbar */}
+       <div className=' pr-4 bg-white-50  border border-gray '>
+          <div className=' flex mt-6  ml-6 mb-2'>
+          <button className=' text-white mr-4 w-16 h-7  bg-violet-950 cursor-pointer rounded-sm  '>Logo</button>
+          <p className='text-xl text-violet-600'>Pr.Name</p>
+
+      </div>
+    </div>
+    {/* downbar */}
+        <div className='absolute top-20 grid :grid-cols-3'>
+          {/*Components*/}
+          <div className='hover:bg-violet-600 hover:text-white  ml-6 mb-6 flex flex-col items-center w-50 rounded cursor-pointer h-19'>
+            <PiSquaresFour size="20"  />
+            <button className='  rounded'>Overview</button>
+      
+          </div>
+          
+          <div className=' hover:bg-violet-600 hover:text-white ml-6 mb-6 flex flex-col items-center w-40 rounded cursor-pointer h-19'>
+           <GrSchedule size="20" />
+            <button className='  rounded'>Schedules</button>
+      
+          </div>
+          <hr class="h-px my-8 ml-6 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+          <div className=' hover:bg-violet-600 ml-6 mb-2  flex flex-col items-center w-40 rounded cursor-pointer h-18'>
+            <IoSettingsOutline  size="20" />
+            <button className='  rounded'>Overview</button>
+      
+          </div>
+              </div>
+              </div>
+              {/*search bar */}
+              <div className=' relative  h-20 shrink-0'>
+              {/* <LuSearch className='absolute top-3 text-violet p-1 pt-2  ' size="30"   /> */}
+              <i className="pi pi-search absolute top-4 text-violet-600 p-1 pl-2 pt-2 pointer-events-none" ></i>
+              
+                <input type="text"
+                placeholder='search'
+                autoComplete='off'
+                className='px-3 py-2 bg-violet-200 mt-3 pl-9 w-80 placeholder-violet-600 text-black rounded border-none focus:border-none'
+                />
+                <i className='pi pi-filter  text-violet-600 absolute top-6 right-3 cursor-pointer  ' />
+               
+                </div>
+                 {/*rightside */}
+                 <div className='flex justify-between mr-10 '>
+                    <i className='pi pi-bell  text-violet-600 mt-6 mr-5  text-xl'  />
+                    <div className='flex'>
+                      <span className="mr-5">
+                        <p className='text-black-500 mt-3   font-bold'>Jhon</p>
+                        <p className='text-gray-600  font-medium'>Doe</p>
+                      </span>
+                      
+                      <BsPersonCircle size="30" className='mt-4 '/>
+                    </div>
+
+
+                  </div>
+                  
+    </div>
+    {/* main-content */}
+   
+    <div className=' ml-sm mr-2 p-2 grid grid-cols-4 md:shrink-0  gap-5 bg-violet-200 w-lg rounded-lg'>
     {tasks.map((task)=>(
   
-    <div className='bg-white border-2 rounded-2xl   w-48 text-center shadow-l border-gray-300 '>
+    <div className='bg-white border-2 rounded-2xl sm:w-[400px] md:w-48    text-center shadow-l border-gray-300 '>
       <div className='ml-1 mr-1'>
        <span className='font-bold  text-text flex justify-between mt-2'>
           <span className='flex '>
@@ -149,7 +258,7 @@ let curDate=dateTime.format(newDate);
      </div>
 </div>
 {/* main tasks levels */}
-<div className="flex">
+<div className="flex  md:shrink-0 ">
 <ScrollArea className="h-xsm w-xmd rounded-md border ml-sm bg-violet-200 p-4">
 <div className="bg-violet-200 pl-2 w-lg  rounded ">
     {/* top */}
@@ -181,11 +290,11 @@ let curDate=dateTime.format(newDate);
     </div></ScrollArea>
 
     {/* side main compo */}
-    <div className="bg-violet-200 w-[278px] rounded" >
+    <div className="bg-violet-200 w-246  rounded md:shrink-0 " >
       {/* your last activity */}
       <div className="mt-2 rounded-xl bg-white ml-2 mr-2">
         <span >
-          <p className="pt-2 pl-2 text-violet-700 font-bold text-medium">Your last activity</p>
+          <p className="pt-2 pl-2 text-violet-700 font-bold text-medium">My activity</p>
           <p className=" pl-2 text-xs text-slate-500 font-medium">{curDate}</p>
         </span>
         <div className="w-[250px] pt-2 pl-2">
@@ -197,7 +306,7 @@ let curDate=dateTime.format(newDate);
 
       </div>
       {/* ask me anything */}
-      <div className="mt-2 rounded-xl bg-white ml-2 mr-2">
+      <div className="mt-1 rounded-xl bg-white ml-2 mb-2 mr-2">
         <img src={virtual_assistant} className="h-[100px] w-[100px] ml-[90px]" alt="virtual assistant is not available" />
         <span >
           <p className="pt-2 pl-2 text-violet-700 text-center font-bold text-medium">Ask me anything</p>
