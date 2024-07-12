@@ -67,15 +67,15 @@ function Levels() {
     <div>   
         <div className='bg-accent grid  rounded'>
         {/* navigation */}
-        <div className='ml-[10px] sm:ml-[0px] p-2 md:justify-center md:gap-[30px] flex justify-between '>
-            <span className='flex md:flex mt-2 sm:flex '>
+        <div className=' p-2  flex justify-between '>
+            <span className='flex  mt-2 sm:flex '>
                 <IoArrowBackCircleOutline size="30" className='cursor-pointer'/>
-                <p className=' ml-[10px] sm:ml-[2px] text-md font-medium sm:text-sm sm:font-base '>Stage-1 {">"}Levels</p>
+                <p className='  text-md font-medium sm:text-sm sm:font-base '>Stage-1 {">"}Levels</p>
             </span>
             <div className='flex gap-2'>
                 <a href="" className=' mt-2 text-md font-medium sm:text-sm sm:font-base underline text-primaryLight'>Activity log</a>
-                <button className='border sm:h-[30px] rounded md:text-sm md:font-base text-md font-medium border-black p-1 hover:bg-primaryLight hover:text-white bg-white flex gap-2'><MdOutlineManageAccounts size="30" className='md:h-[20px] md:w-[20px] sm:h-[18px] sm:w-[18px]'/>Manage</button>
-                <button className='border sm:h-[30px] rounded md:text-sm md:font-base text-md font-medium border-black p-1 hover:bg-primaryLight hover:text-white bg-white flex gap-2'><CiCirclePlus  size="30" className='md:h-[20px] md:w-[20px] sm:h-[18px] sm:w-[18px]'/>create</button>
+                <button className='border  rounded md:text-sm md:font-base text-md font-medium border-black p-1 hover:bg-primaryLight hover:text-white bg-white flex gap-2'><MdOutlineManageAccounts size="30" className='md:h-[20px] md:w-[20px] sm:h-[18px] sm:w-[18px]'/>Manage</button>
+                <button className='border  rounded md:text-sm md:font-base text-md font-medium border-black p-1 hover:bg-primaryLight hover:text-white bg-white flex gap-2'><CiCirclePlus  size="30" className='md:h-[20px] md:w-[20px] sm:h-[18px] sm:w-[18px]'/>create</button>
 
             </div>
             
@@ -100,7 +100,7 @@ function Levels() {
        {level.level===1 ?
          <div className="flex justify-between    lg:flex md:flex   sm:flex p-2 mt-6">
          <p className="pl-4 text-sm font-medium">Level-{level.level}</p>
-        <div className="md:text-wrap sm:w-[100px]">
+        <div className=" sm:w-[100px]">
            <p className=" md:pl-[4px] sm:pl-[0px]  sm:font-normal sm:text-sm text-sm font-medium text-black-300">{level.Description}</p>
         </div>
         <div className="md:mr-[150px] 4k:flex 4k:mr-[150px] 2xlg:flex 2xlg:mr-[150px] xlg:flex xlg:mr-[150px] lg:flex lg:mr-[150px] md:flex md:justify-between sm:flex sm:justify-between sm:mr-[50px] ">
