@@ -27,7 +27,7 @@ import { HiOutlinePlusCircle } from "react-icons/hi2";
 import { FaRegSmile } from "react-icons/fa";
 import { FaRegCheckCircle } from "react-icons/fa";
 import { Progress } from "../ui/progress";
-import { ScrollArea } from "../ui/scroll-area";
+import { ScrollArea, ScrollBar } from "../ui/scroll-area";
 
 // import {
 //   Card,
@@ -100,51 +100,24 @@ function Tasks() {
     {
       id: 10,
       progress: 32,
+    },{
+      id: 11,
+      progress: 32,
+    },{
+      id: 12,
+      progress: 32,
+    },{
+      id: 13,
+      progress: 32,
+    },{
+      id: 14,
+      progress: 32,
+    },{
+      id: 15,
+      progress: 32,
     },
   ];
 
-  const levels = [
-    {
-      level: 1,
-      Description: "Description",
-    },
-    {
-      level: 2,
-      Description: "Description",
-    },
-    {
-      level: 3,
-      Description: "Description",
-    },
-    {
-      level: 4,
-      Description: "Description",
-    },
-    {
-      level: 5,
-      Description: "Description",
-    },
-    {
-      level: 6,
-      Description: "Description",
-    },
-    {
-      level: 7,
-      Description: "Description",
-    },
-    {
-      level: 8,
-      Description: "Description",
-    },
-    {
-      level: 9,
-      Description: "Description",
-    },
-    {
-      level: 10,
-      Description: "Description",
-    },
-  ];
   var newDate = new Date();
   let dateTime = new Intl.DateTimeFormat("en-In", {
     dateStyle: "short",
@@ -156,9 +129,9 @@ function Tasks() {
     <div className="">
       {/* main-content */}
 
-      <div className=" mr-2 p-2 grid grid-cols-4 md:shrink-0  gap-5 bg-accent w-full rounded-lg">
+      <div className=" mr-2 p-2 grid grid-cols-4 lg:grid-cols-4 md:grid-cols-4 md:w-[1000px] lg:w-[1000px] sm:grid-cols-2 md:shrink-0 sm:gap-2 gap-5 bg-accent  rounded-lg">
         {tasks.map((task) => (
-          <div className="bg-white border-2 rounded-2xl sm:w-[400px] md:w-48    text-center shadow-l border-gray-300 ">
+          <div className="bg-white border-2 md:flex md:justify-between rounded-2xl sm:w-[180px] md:w-48    text-center shadow-l border-gray-300 ">
             <div className="ml-1 mr-1">
               <span className="font-bold  text-text flex justify-between mt-2">
                 <span className="flex ">
@@ -174,7 +147,7 @@ function Tasks() {
             </div>
           </div>
         ))}
-        <div className="bg-white border-2 font-bold rounded-lg  w-48 text-center shadow-xl border-gray-300">
+        <div className="bg-white border-2 sm:w-[180px] font-bold rounded-lg  w-48 text-center shadow-xl border-gray-300">
           <div className="ml-1 mr-1 mt-2">
             <span className=" text-text text-center">
               <h1>Add ToDoList</h1>
@@ -186,11 +159,11 @@ function Tasks() {
         </div>
       </div>
       {/* main tasks levels */}
-      <div className="flex bg-accent w-full md:shrink-0 ">
-        <ScrollArea className="h-xsm w-xmd rounded-md border  p-4">
-          <div className=" pl-2 w-lg  rounded ">
+      <div className="flex sm:flex sm:flex-col md:w-[1000px] lg:w-[1000px] bg-accent w-full md:shrink-0 ">
+        <div className=" w-xmd sm:w-[330px]  rounded-md border   p-4" >
+          <div className=" pl-2 w-lg sm:w-[330px] rounded ">
             {/* top */}
-            <div className="bg-white rounded-md w-md border-2 h-full flex justify-between p-2 border-b-2 ">
+            <div className="bg-white sm:w-[330px] rounded-md w-md border-2 h-full flex justify-between p-2 border-b-2 ">
               <p className="text font-bold text-lg">Stages</p>
               <PiSquaresFour
                 size="30"
@@ -199,7 +172,7 @@ function Tasks() {
             </div>
             {/* levels progress */}
             {stages.map((stage) => (
-              <div className=" bg-white w-md flex rounded justify-between">
+              <div className=" bg-white w-md sm:w-[330px] flex rounded md:justify-between 4k:justify-between xlg:justify-between lg:justify-between">
                 <div className="bg-white   h-full p-2">
                   <p className=" text text-base font-medium">
                     Stage-{stage.id}
@@ -208,20 +181,20 @@ function Tasks() {
                     10 Levels
                   </p>
                 </div>
-                <div>
-                  <span className="w-sm flex justify-between">
+                <div className="sm:pt-[10px]">
+                  <span className="w-sm sm:w-[150px]  flex justify-between">
                     {" "}
-                    <p className="bg-black-500 text-md font-medium">
+                    <p className="bg-black-500 sm:text-sm sm:font-base text-md font-medium">
                       Progress Bar
                     </p>
-                    <p className="text-primaryLight text-md font-medium">
+                    <p className="text-primaryLight sm:text-sm sm:font-base text-md font-medium">
                       {stage.progress}%
                     </p>
                   </span>
-                  <Progress value={stage.progress} className="mt-2 t " />
+                  <Progress value={stage.progress} className="mt-2 t sm:h-[5px] sm:w-[150px] " />
                 </div>
                 <div>
-                  <p className="text text-primaryLight font-medium mt-2 mr-2 cursor-pointer ">
+                  <p className="text text-primaryLight sm:text-sm sm:font-base sm:ml-[20px] font-medium mt-2 mr-2 cursor-pointer ">
                     View Details
                   </p>
                 </div>
@@ -230,12 +203,12 @@ function Tasks() {
 
             {/* stages completed */}
           </div>
-        </ScrollArea>
+        </div >
 
         {/* side main compo */}
         <div className=" w-246  rounded md:shrink-0 ">
           {/* your last activity */}
-          <div className="mt-2 rounded-xl bg-white ml-2 mr-2">
+          <div className="mt-2 sm:w-[330px] sm:ml-5 sm:pl-2 rounded-xl bg-white ml-2 mr-2">
             <span>
               <p className="pt-2 pl-2 text-primaryLight font-bold text-medium">
                 My Tasks
@@ -257,7 +230,7 @@ function Tasks() {
             </button>
           </div>
           {/* ask me anything */}
-          <div className="mt-1 rounded-xl bg-white ml-2 mb-2 mr-2">
+          <div className="mt-1 rounded-xl sm:w-[330px] sm:ml-5 sm:pl-2 bg-white ml-2 mb-2 mr-2">
             <img
               src={virtual_assistant}
               className="h-[100px] w-[100px] ml-[90px]"

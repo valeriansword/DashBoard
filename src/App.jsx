@@ -11,8 +11,8 @@ function App() {
   return (
     <div >
      
-     {/* <Tasks /> */}
-     <Levels />
+     <Tasks />
+     {/* <Levels /> */}
      
     </div>
   )
