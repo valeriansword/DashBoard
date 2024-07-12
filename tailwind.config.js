@@ -9,15 +9,6 @@ module.exports = {
   ],
   prefix: "",
   theme: {
-    screens: {
-      "2xlg": {'min': '1201px', 'max': '1490px'},
-      "sm":{'min': '300px', 'max': '550px'},
-      "md":{'min': '551px', 'max': '750px'},
-      "lg":{'min': '751px', 'max': '1050px'},
-      "xlg":{'min': '1051px', 'max': '1200px'},
-      "4k":{"min":"1491px","max":"2500px"}
-
-    },
     container: {
       center: true,
       padding: "2rem",
