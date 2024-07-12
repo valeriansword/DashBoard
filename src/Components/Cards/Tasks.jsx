@@ -105,7 +105,7 @@ function Tasks() {
 
       <div className=" mr-2 p-2 grid lg:grid-cols-4  sm:w-[425px] lg:w-full gap-5 md:grid-cols-2 md:w-[500px] md:justify-between bg-accent  rounded-lg">
         {tasks.map((task) => (
-          <div className="bg-white border-2 sm:ml-[100px] rounded-2xl  w-48  text-center shadow-l border-gray-300 ">
+          <div className="bg-white border-2 sm:ml-[100px] md:ml-[5px] rounded-2xl  w-48  text-center shadow-l border-gray-300 ">
             <div className="ml-1 mr-1">
               <span className="font-bold  text-text flex justify-between mt-2">
                 <span className="flex ">
@@ -121,7 +121,7 @@ function Tasks() {
             </div>
           </div>
         ))}
-        <div className="bg-white border-2 sm:ml-[100px] font-bold rounded-lg  w-48 text-center shadow-xl border-gray-300">
+        <div className="bg-white border-2 sm:ml-[100px] md:ml-[5px] font-bold rounded-lg  w-48 text-center shadow-xl border-gray-300">
           <div className="ml-1 mr-1 mt-2">
             <span className=" text-text text-center">
               <h1>Add ToDoList</h1>
