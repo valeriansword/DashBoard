@@ -9,14 +9,19 @@ module.exports = {
   ],
   prefix: "",
   theme: {
+    screens: {
+      "2xlg": {'min': '1201px', 'max': '1490px'},
+      "sm":{'min': '300px', 'max': '550px'},
+      "md":{'min': '551px', 'max': '750px'},
+      "lg":{'min': '751px', 'max': '1050px'},
+      "xlg":{'min': '1051px', 'max': '1200px'},
+      "4k":{"min":"1491px","max":"2500px"}
+
+    },
     container: {
       center: true,
       padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-       
-
-      },
+     
     },
     extend: {
       colors: {
@@ -33,16 +38,23 @@ module.exports = {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },
+        secondaryDark:{
+          DEFAULT:"rgb(140,58,35)",
+
+        },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
+        },
+        primaryLight:{
+          DEFAULT:"rgb(4,68,145)"
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
+          DEFAULT: "rgb(234,245,254)",
           foreground: "hsl(var(--accent-foreground))",
         },
         popover: {
