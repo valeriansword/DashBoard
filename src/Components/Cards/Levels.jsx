@@ -87,8 +87,8 @@ function Levels() {
 
             
                 <p className="text-violet-1000 md:text-sm md:font-base  text-md p-2 pl-6 font-medium">Levels</p>
-                <p className="text-violet-1000 md:text-sm md:font-base  text-md p-2 pr-6 font-medium">Description</p>
-                <p className="text-violet-1000 md:text-sm md:font-base   text-md text-center p-2 pr-[100px] font-medium">
+                <p className="text-violet-1000 md:text-sm md:font-base  text-md p-2  font-medium">Description</p>
+                <p className="text-violet-1000 sm:ml-[10px]  md:text-sm md:font-base   text-md text-center p-2 lg:pr-[100px] font-medium">
                     Upload Files
                     <p className="text-sm font-normal   sm:font-normal text-gray-500">( upload files to complete tasks)</p>
                     </p>
