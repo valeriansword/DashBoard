@@ -36,17 +36,21 @@ const tasks=[
 ]
 function Home() {
   const [stageName,setStageName]=useState("");
+  const [newStage,setNewStage]=useState("");
   const [submitted,setSubmitted]=useState(false);
+  
+  const handleInput=(event)=>{
+    setSubmitted(false);
+    setNewStage(event.target.value);
+    
+
+  }
   const handleSubmit=(e)=>{
     e.preventDefault();
     setSubmitted(true);
+    setStageName((t)=>[...t,newStage]);
+    setNewStage("");
     console.log("hi"+stageName)
-  }
-  const handleInput=(event)=>{
-    setSubmitted(false);
-    setStageName(event.target.value)
-    console.log(stageName);
-
   }
   
   return (
@@ -72,7 +76,7 @@ function Home() {
       <div className='bg-white border-2  mt-2 lg:w-60 rounded-2xl  details w-40 md:w-48 text-center  '>
         <div className='ml-1 mr-1 mt-2'>
          <span className=' text-text font-bold text-center'>
-            <h1 >Add ToDoList</h1>
+            <h1 >Add To Do List</h1>
           </span>
           <h2 className='mt-4 ml-16 sm:ml-20'>
           <Popover>
@@ -93,7 +97,7 @@ function Home() {
        
   </div>
   <div className="flex justify-center items-center h-full">
-           <Task submitted={submitted} stageName={stageName} />
+           <Task submitted={submitted} setStageName={setStageName} stageName={stageName} />
        </div>
 
       

@@ -70,7 +70,8 @@ const stages=[
   level:10
 }
 ]
-function Task({submitted,stageName}) {
+
+function Task({submitted,stageName,setStageName}) {
     
    
     var newDate = new Date();
@@ -79,6 +80,10 @@ function Task({submitted,stageName}) {
     timeStyle: "short",
   });
   let curDate = dateTime.format(newDate); 
+  const handleDelete=(index)=>{
+    const updatedStage=stageName.filter((_,i)=>i!=index);
+    setStageName(updatedStage)
+  }
       
   return (
     <div className='h-full m-4 w-full  md:flex max-md:flex max-md:flex-col-reverse justify-evenly'>
@@ -130,16 +135,37 @@ function Task({submitted,stageName}) {
               <p className="pt-2 pl-2 text-primaryLight font-bold text-medium">
                 My To Do List
               </p>
-              <p className=" pl-2 text-xs text-slate-500 font-medium">
+              {/* <p className=" pl-2 text-xs text-slate-500 font-medium">
                 {curDate}
               </p>
               <p className='pl-2 text-xs text-slate-500 font-medium'>
                 complete all the levels in the current stage to 
                 unlock more stages and learn new things ...
-              </p>
+              </p> */}
             </span>
             <div className="w-[250px] pt-2 pl-2 ">
-              {submitted && <p className='text-gray-500 font-medium text-md max-md:pl-2'>  {stageName} </p>}
+
+              {submitted && 
+              <ol >
+           { stageName.map((stage,index)=>(
+              <span className=' text-gray-500 font-medium text-md '>
+               
+              
+              <li key={index}className='text-gray-500 flex justify-between font-medium text-md max-md:pl-2'>  
+                {stage}
+                        <button className='cursor-pointer' onClick={()=>handleDelete(index)}>x</button>
+              </li>
+              
+               
+            </span>
+
+            )
+
+            )
+           
+           } </ol>
+              }
+              
             </div>
             <button className="w-[270px] mb-2 max-sm:ml-4 max-md:w-[300px] text-white h-[30px] bg-primaryLight">
               Resume
