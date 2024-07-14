@@ -40,7 +40,7 @@ function Home() {
   const [submitted,setSubmitted]=useState(false);
   
   const handleInput=(event)=>{
-    setSubmitted(false);
+    
     setNewStage(event.target.value);
     
 
