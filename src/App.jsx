@@ -11,8 +11,8 @@ function App() {
     <div >
      
      {/* <Tasks /> */}
-     {/* <Levels /> */}
-     <Home />
+     <Levels />
+     {/* <Home /> */}
      
     </div>
   )

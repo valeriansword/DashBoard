@@ -100,7 +100,7 @@ function Levels() {
        {level.level===1 ?
          <div className="flex justify-between    lg:flex md:flex   sm:flex p-2 mt-6">
          <p className="pl-4 text-sm font-medium">Level-{level.level}</p>
-        <div className=" sm:w-[100px]">
+        <div className=" max-md:w-[100px]">
            <p className=" md:pl-[4px] sm:pl-[0px]  sm:font-normal sm:text-sm text-sm font-medium text-black-300">{level.Description}</p>
         </div>
         <div className="md:mr-[150px] 4k:flex 4k:mr-[150px] 2xlg:flex 2xlg:mr-[150px] xlg:flex xlg:mr-[150px] lg:flex lg:mr-[150px] md:flex md:justify-between sm:flex sm:justify-between sm:mr-[50px] ">
@@ -114,7 +114,7 @@ function Levels() {
      
         <div className="flex  justify-between  sm:flex lg:flex md:flex p-2 mt-6">
         <p className="pl-4 text-sm font-medium text-gray-300">Level-{level.level}</p>
-        <div className="sm:w-[100px]">
+        <div className="max-md:w-[100px]">
         <p className="  md:pl-[4px] sm:pl-[0px] text-sm font-medium  text-gray-300">{level.Description}</p></div>
       <div className="text-gray-300 4k:flex 4k:mr-[150px]  xlg:flex xlg:mr-[150px] 2xlg:flex 2xlg:mr-[150px] lg:flex lg:mr-[150px] lg:justify-between md:mr-[150px] md:flex md:justify-between sm:flex sm:justify-between sm:mr-[50px]">
         
