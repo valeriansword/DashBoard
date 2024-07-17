@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import { PiSquaresFour } from "react-icons/pi";
 import { Progress } from "@/Components/ui/progress";
-
+import {Link} from "react-router-dom"
 import virtual_assistant from "/virtual_assistant.webp";
 const stages=[
     {
@@ -111,7 +111,7 @@ function Task({submitted,stageName,setStageName}) {
                      <Progress value={stage.progress} className="w-[100%]" />
                 
                 </div>
-                <h1 className='text-progress flex ml-2 mr-0'>View Details</h1>
+                <Link to="/DashBoard/levels"><h1 className='text-progress flex ml-2 mr-0'>View Details</h1></Link>
                 </div>
                 
                 

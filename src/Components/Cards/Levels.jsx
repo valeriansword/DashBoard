@@ -3,7 +3,7 @@ import React from "react";
 import { IoArrowBackCircleOutline } from "react-icons/io5";
 import { MdOutlineManageAccounts } from "react-icons/md";
 import { CiCirclePlus } from "react-icons/ci";
-
+import {Link} from "react-router-dom"
 import { FiArrowLeftCircle } from "react-icons/fi";
 
 import { AlignCenter, PlusCircleIcon } from "lucide-react";
@@ -69,7 +69,7 @@ function Levels() {
         {/* navigation */}
         <div className=' p-2  flex justify-between '>
             <span className='flex  mt-2 sm:flex '>
-                <IoArrowBackCircleOutline size="30" className='cursor-pointer'/>
+              <Link to="/DashBoard">  <IoArrowBackCircleOutline size="30" className='cursor-pointer'/></Link>
                 <p className='  text-md font-medium sm:text-sm sm:font-base '>Stage-1 {">"}Levels</p>
             </span>
             <div className='flex gap-2'>
