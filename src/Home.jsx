@@ -55,6 +55,7 @@ function Home() {
   
   return (
     <div className='bg-[#eaf5fe]'>
+      <h1>Hello</h1>
     <div className='grid ml-6 mr-2 grid-cols-2  md:grid-cols-4 gap-10'>
       {tasks.map((task)=>(
       <div key={task.id} className='bg-white mt-2 border-2 rounded-2xl lg:w-60 details w-50 md:w-48 text-center  '>
