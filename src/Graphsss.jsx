@@ -81,7 +81,7 @@ function Graphsss() {
          
       </PieChart>
           <div>
-            <ul className={`bg-[${g.color[0]}]`} style={{listStyleType:"disc"}}>
+            <ul className={`text-[${g.color[0]}]`} style={{listStyleType:"disc"}}>
                 {
                     g.graphValue.map((gv)=>{
                         return <li>{gv.name}-{gv.value}</li>
